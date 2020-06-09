@@ -1,4 +1,4 @@
-const Creature = artifacts.require("./Creature.sol");
+const photo_base = artifacts.require("./photo_base.sol");
 
 module.exports = function(deployer, network) {
   // OpenSea proxy registry addresses for rinkeby and mainnet.
@@ -9,5 +9,5 @@ module.exports = function(deployer, network) {
     proxyRegistryAddress = "0xa5409ec958c83c3f309868babaca7c86dcb077c1";
   }
 
-  deployer.deploy(Creature, proxyRegistryAddress, {gas: 5000000});
+  deployer.deploy(photo_base, proxyRegistryAddress, {gas: 5000000});
 };
